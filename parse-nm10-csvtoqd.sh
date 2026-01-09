@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Usage:
-#   ./aws-to-csv2qd-cropper.sh params.txt aws*obs_csv_*.csv > csv2qd_input.csv
+#   ./parse-nm10-csvtoqd.sh params.txt aws*obs_csv_*.csv > csv2qd_input.csv
 
 PARAMS_FILE="${1:?params file required}"
 shift
