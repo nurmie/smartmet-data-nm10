@@ -58,7 +58,7 @@ for f in "$@"; do
         k=a[i]; v=a[i+1]
         gsub(/^[ \t]+|[ \t]+$/, "", k)
         gsub(/^[ \t]+|[ \t]+$/, "", v)
-        if (k != "") kv[k]=v
+        if (k != "" && v != "/") kv[k]=v
       }
 
       # emit row (NO HEADER)
