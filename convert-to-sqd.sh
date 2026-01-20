@@ -18,8 +18,7 @@ STATIONFILE=$BASE/run/data/aws/cnf/stations.csv
 OBSFILE=$TMP/${TIMESTAMP}_aws_ukraine.sqd
 PARAMFILE=/smartmet/run/data/aws/cnf/parameters.csv
 PARAMORDER=idtime
-#PARAMS=Temperature,PressureAtStationLevel,Humidity,WindDirection,WindSpeedMS,PrecipitationAmount,Precipitation1h
-PARAMS=Temperature,Humidity,Pressure,DewPoint,WindSpeedMS,WindDirection,WindGust,Precipitation1h,SnowDepth
+PARAMS=Temperature,Humidity,Pressure,DewPoint,WindSpeedMS,WindDirection,WindGust,Precipitation1h
 
 mkdir -p $TMP
 mkdir -p $OUT
