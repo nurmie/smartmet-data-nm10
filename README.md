@@ -14,6 +14,8 @@ This repository contains tools to:
 
 ### update.sh
 
+**This needs to customized modified per installation location**
+
 Main entry point script that:
 - Fetches AWS observation data from a configured FTP server using `wget --mirror`
 - Processes downloaded files through the parsing pipeline
