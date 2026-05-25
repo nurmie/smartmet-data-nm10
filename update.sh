@@ -1,5 +1,7 @@
 #!/bin/sh
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 if [ -s /smartmet/cnf/data/aws-ukraine.cnf ]; then
     . /smartmet/cnf/data/aws-ukraine.cnf
 fi
@@ -41,6 +43,6 @@ for dir in $MODEL_RAW_ROOT/aws810/aws*; do
 
   find "$dir" -maxdepth 1 -type f -name 'aws*obs_csv_*.csv' -print0 \
     | sort -z \
-    | xargs -0 --no-run-if-empty -n 1000 bash ./parse-nm10-csvtoqd.sh "$PARAMS" \
+    | xargs -0 --no-run-if-empty -n 1000 bash "$SCRIPT_DIR/parse-nm10-csvtoqd.sh" "$PARAMS" \
     >> "$OUT"
 done
