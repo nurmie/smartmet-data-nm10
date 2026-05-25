@@ -24,8 +24,8 @@ mkdir -p $TMP
 mkdir -p $OUT
 
 # Use log file if not run interactively
-if [ $TERM = "dumb" ]; then
-    exec &> $LOGFILE
+if [ "${TERM:-}" = "dumb" ]; then
+    exec &>> $LOGFILE
 fi
 
 echo "IN:  $IN"
